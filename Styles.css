@@ -68,9 +68,6 @@ body {
   
 }
 
-
-
-
 /* Header styles */
 h1 {
   text-align: left;
@@ -82,12 +79,7 @@ h1 {
     font-weight: lighter;
     font-size: 1.5em;
     z-index: 1000;
-    position: absolute;
-
-
-    
-
-    
+    position: absolute; 
 }
 
 ::-webkit-scrollbar {
@@ -142,7 +134,7 @@ font-size: 5em;
 
 
 #overlay {
-  position: relative;
+  position: fixed;
 }
 
 
@@ -334,17 +326,13 @@ p.label {
 }
 
 
-
-
-
 /* Form styles */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem auto;
-  width: 80%;
+  position: fixed;
+  top: 10px;
+  margin: 200px 70px 50px 70px;
   color: white;
+  align-content: center;
 }
 
 
