@@ -70,31 +70,45 @@ h1 {
   background-color: rgba(255, 255, 255, 0.5); 
 }
 
-#bigweather {
-    position:absolute; top: 600px;
-    margin-left: 50px;
-    color: white;
-    font-family: 'Dubai-Bold';
-    
-    
+/* bigweather styles */
 
-    
-    
+#bigweather {
+  position: fixed;
+  bottom: 20px;
+  left: 25px;
+  color: white;
+  
 }
+
+#bigweathertemp {
+font-size: 5em;
+}
+
+#Conditions {
+  font-size: 2.5em;
+}
+
+#bigweathertemp,
+#Conditions,
+#weathericon {
+  display: inline-block;
+  margin-right: 15px;
+  height: 50px;
+  font-family: 'Dubai-Bold';
+}
+
+#weathericon {
+  width: 50px; 
+}
+
+
+
 
 
 #overlay {
   position: relative;
 }
 
-
-  
-
-#bigweathertemp{
-  font-size: 5em;
-  font-family: 'Dubai-Bold';
-  
-}
 
 #indexbutton {
   position: absolute;
@@ -107,16 +121,7 @@ h1 {
     z-index: 999;
   }
 
-#weathericon {
-    margin-left: 20px;
-    margin-top: -35px;
-}
 
-#Conditions {
-  font-size: 2.5em;
-  margin-left: 20px;
-  
-}
 
 span::first-letter {
   text-transform: uppercase;
@@ -200,6 +205,9 @@ p.label {
 
 #weathericon {
   font-size: 3em;
+  position: fixed;
+  bottom: 20px;
+  
 }
 
 
