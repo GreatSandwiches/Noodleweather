@@ -1,5 +1,3 @@
-const config = require("./config");
-
 document.addEventListener('DOMContentLoaded', () => {
 
   async function callchatgpt() {
