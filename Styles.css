@@ -35,6 +35,42 @@ body {
   
 }
 
+
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 10px; 
+  }
+
+  h1 {
+      font-size: 0.7em; 
+  }
+
+  #bigweathertemp {
+    font-size: 2em;
+  }
+
+  
+}
+
+@media screen and (max-width: 500px) {
+  body {
+      font-size: 9px; 
+  }
+
+  h1 {
+      font-size: 0.5em; 
+  }
+
+  #bigweathertemp {
+    font-size: 1em;
+  }
+
+  
+}
+
+
+
+
 /* Header styles */
 h1 {
   text-align: left;
