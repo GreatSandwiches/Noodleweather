@@ -1,3 +1,5 @@
+const config = require("./config");
+
 document.addEventListener('DOMContentLoaded', () => {
 
   async function callchatgpt() {
@@ -19,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stream: false,
     };
 
-    const apiKey = "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";
+    const openaiSecretKey = config.openaiSecretKey
     const headers = {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+      Authorization: `Bearer ${openaiSecretKey}`,
     };
     const url = "https://api.openai.com/v1/chat/completions";
 
