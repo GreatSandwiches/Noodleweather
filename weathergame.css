@@ -1,0 +1,191 @@
+
+@font-face {
+  font-family: 'Dubai-Bold';
+  src: url('webfonts/DubaiW23-Bold.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Bold.woff') format('woff'),
+       url('webfonts/DubaiW23-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dubai-Regular';
+  src: url('webfonts/DubaiW23-Regular.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Regular.woff') format('woff'),
+       url('webfonts/DubaiW23-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+  font-family: 'Dubai-Regular', sans-serif;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position:relative;
+  backdrop-filter: blur(25px);
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 50px;
+  margin-bottom: 0 ;
+  
+
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(25px);
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 1rem;
+}
+
+
+
+/* webkitbrowser scrollbar customisation */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+/* Customize radio buttons */
+.options input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Customize checked state of radio buttons */
+.options input[type="radio"]:checked::before {
+  content: "✓";
+  display: block;
+  text-align: center;
+  line-height: 20px;
+}
+.options input[type="radio"]:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+  
+  
+}
+
+
+
+#mainpagebutton button {
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+  width: 95px;
+  height: 35px;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 5px;
+
+
+}
+
+#mainpagebutton button:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+
+#submitBtn {
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+  width: 95px;
+  height: 50px;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 50px;
+ 
+  
+  
+}
+
+#submitBtn:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+
+
+
+#quiz {
+  overflow: auto;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  
+  
+}
+
+
+
+.question {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; 
+  width: 1500px; 
+  max-width: 90%; 
+  box-sizing: border-box;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-family: 'Dubai-Bold', sans-serif;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+#submitBtn {
+  margin-top: 10px;
+}

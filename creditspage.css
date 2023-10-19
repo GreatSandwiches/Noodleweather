@@ -1,0 +1,134 @@
+
+@font-face {
+  font-family: 'Dubai-Bold';
+  src: url('webfonts/DubaiW23-Bold.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Bold.woff') format('woff'),
+       url('webfonts/DubaiW23-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dubai-Regular';
+  src: url('webfonts/DubaiW23-Regular.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Regular.woff') format('woff'),
+       url('webfonts/DubaiW23-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* CSS Grid for organizing the sections */
+body {
+  font-family: Dubai-Regular, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  margin-top: 100px;
+
+  
+  
+}
+
+
+/* CSS for each section */
+#backgroundimage,
+#weatherapi,
+#iconsection,
+#openaitext {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+#backgroundimage {
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    grid-column: 2;
+    grid-row: 2 
+  }
+
+  #indexbuttonlink button{ 
+    font-family: Dubai-Regular, sans-serif;
+    padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  
+  
+ 
+ 
+  }
+
+  #indexbuttonlink button:hover {
+    background-color: rgba(95, 158, 160, 0.2);
+  }
+
+  #weatherapi {
+    grid-column: 2;
+    grid-row: 3
+  }
+
+  #iconsection {
+    grid-column: 1;
+    
+  }
+
+  h1 {
+    top: 0;
+    
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -40px;
+
+
+  }
+
+  #pexels {
+    width: 200px;
+    
+  }
+
+ #weatherapi a {
+  color: white;
+ }
+
+ #iconsection img {
+  width: 100px;
+ }
+
+ #iconsection a {
+  color: white;
+ }
+
+ #openaitext a {
+  color: white;
+ }
+  
+  .grey-link {
+    color: white;
+  }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="weathergame.css">
+    <script src="backgroundimage-storage.js"></script>
+  <title>Weather Quiz</title>
+  
+</head>
+<body>
+  <h1>Weather Quiz</h1>
+  <div id="mainpagebutton">
+    <a id="mainpagebuttonlink" href="Index-OPEN THIS.html"><button>Main Page</button></a>
+    <div class="overlay"></div>
+
+
+  </div>
+  
+
+  <div id="quiz"></div>
+  
+  <script>
+    // q&a data
+    var quizData = [
+  {
+    question: "What is the name for a rotating column of air that is in contact with both the surface of the Earth and a cumulonimbus cloud?",
+    options: ["Tornado", "Hurricane", "Typhoon", "Cyclone"],
+    answer: "Tornado"
+  },
+  {
+    question: "What is the term used to describe the boundary between two air masses with different temperatures?",
+    options: ["Front", "Thermocline", "Isotherm", "Convection"],
+    answer: "Front"
+  },
+  {
+    question: "Which layer of the atmosphere is known for containing the ozone layer?",
+    options: ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere"],
+    answer: "Stratosphere"
+  },
+  {
+    question: "What is the term used for a large-scale weather pattern caused by the interaction between the ocean and the atmosphere?",
+    options: ["El Niño", "La Niña", "Monsoon", "Eddy"],
+    answer: "El Niño"
+  },
+  {
+    question: "What is the process by which water vapor changes directly into ice without first becoming a liquid?",
+    options: ["Deposition", "Condensation", "Evaporation", "Sublimation"],
+    answer: "Deposition"
+  }
+  // Add more questions 
+];
+
+    
+    var quizContainer = document.getElementById("quiz");
+    var resultsContainer = document.createElement("div");
+    var submitButton = document.createElement("button");
+    
+    // Display the quiz questions and options
+    function showQuiz() {
+      var output = [];
+    
+      quizData.forEach(function (question, index) {
+        var options = [];
+    
+        for (var i = 0; i < question.options.length; i++) {
+          options.push(
+            `<li><input type="radio" name="question${index}" value="${question.options[i]}">${question.options[i]}</li>`
+          );
+        }
+    
+        output.push(
+          `<div class="question">${question.question}</div><ul class="options">${options.join("")}</ul>`
+        );
+      });
+    
+      quizContainer.innerHTML = output.join("");
+      quizContainer.appendChild(submitButton);
+    
+      submitButton.innerHTML = "Submit";
+      submitButton.id = "submitBtn";
+      submitButton.addEventListener("click", showResults);
+    }
+    
+    // Calculate the quiz results
+    function showResults() {
+      var answerContainers = quizContainer.querySelectorAll(".options");
+      var numCorrect = 0;
+    
+      quizData.forEach(function (question, index) {
+        var answerContainer = answerContainers[index];
+        var selector = `input[name=question${index}]:checked`;
+        var userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    
+        if (userAnswer === question.answer) {
+          numCorrect++;
+          answerContainers[index].style.color = "green";
+        } else {
+          answerContainers[index].style.color = "red";
+        }
+      });
+    
+      resultsContainer.innerHTML = `You scored ${numCorrect} out of ${quizData.length} questions correctly.`;
+      quizContainer.appendChild(resultsContainer);
+      submitButton.removeEventListener("click", showResults);
+      submitButton.disabled = true;
+    }
+    
+    showQuiz(); // Start the quiz
+  </script>
+</body>
+</html>

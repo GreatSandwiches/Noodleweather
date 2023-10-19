@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+  <title>noodle.weather</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="weather-icons.css">
+  <script src="Websiteapi.js"></script>
+  <script src="gpt3api.js"></script>  
+  
+  
+  
+</head>
+  <body onload="getLocation()">
+    
+  <script src="inputform.js"></script>
+
+      <style>
+body {
+  background: url('Fog.jpg') no-repeat center center fixed;
+    background-size: cover
+}
+</style>
+
+      
+  <h1>noodle.weather</h1> 
+  
+
+  <div id="locationdata"> </div>
+
+<div id="bigweather">
+      <span id="bigweathertemp"> </span>
+      <span id="Conditions">  </span>
+      <span id="weathericon"></span>
+    </div>
+</div>
+  
+      
+<div id="overlay">
+  
+        <div>
+          <form id="weatherForm">
+            <input type="text" id="locationInput" placeholder="Enter city, country" />
+            <button type="submit" id="submitbutton"></button>
+            <img id="searchicon" src="Images/search.png">
+          </form>
+          <div id="weatherResult"></div>
+        
+        </div>
+
+        <div id="pinnedlocations">
+          <p id="pinnedlocationheader">Pinned locations:</p>
+          <button type="button" id="pinlocationbutton">Pin location</button>
+          <ul id="pinnedlocationlist">
+        
+        
+          </ul>
+        
+        
+        </div>
+        
+        <div id="apicallgpt">
+          
+          <p id="apidata"> Generating your custom forecast....</p>
+        </div>
+    
+      <div id="searchresults">
+        <p id="wind"class="label">Wind</p>
+      <p id="windspeedvalue"class="weathervalues"></p>
+      
+      <div id="humidity">
+          <p id ="humidity"class="label">Humidity</p>
+          <p id="humidityvalue"class="weathervalues"></p>
+      </div>
+      
+      <div id= "pressure">
+          <p id ="airpressure" class="label">Air pressure</p>
+          <p id="airpressurevalue"class="weathervalues" > </p>
+      </div>
+
+      <button id="resetButton">Reset home location</button>
+      <div id="creditspagelink"> 
+        <a href="credits page.html"><button>Credits Page</button></a> 
+    
+      </div>
+
+      <div id="weathergamelink">
+        <a href="weathergame.html"><button>Weather Quiz</button></a>
+      </div>
+
+
+      
+  </div>
+        
+
+  
+  
+  <script src="pinnedlocations.js"></script>
+    
+    
+    
+</div>    
+
+    
+</body>
+
+</html>
+     

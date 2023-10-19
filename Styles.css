@@ -1,0 +1,439 @@
+@font-face {
+  font-family: 'Dubai-Bold';
+  src: url('webfonts/DubaiW23-Bold.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Bold.woff') format('woff'),
+       url('webfonts/DubaiW23-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dubai-Regular';
+  src: url('webfonts/DubaiW23-Regular.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Regular.woff') format('woff'),
+       url('webfonts/DubaiW23-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dubai-Regular';
+  src: url('webfonts/DubaiW23-Light.woff2') format('woff2'),
+       url('webfonts/DubaiW23-Light.woff') format('woff'),
+       url('webfonts/DubaiW23-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { overflow: hidden; }
+
+/* Global styles */
+body {
+  font-family: Dubai-Regular, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Header styles */
+h1 {
+  text-align: left;
+  margin-top: 1.5rem;
+    color: white;
+    font-family: 'Dubai-Regular';
+    margin-left: 1.5em;
+    opacity: 0.5;
+    font-weight: lighter;
+    font-size: 1.5em;
+    z-index: 1000;
+    position: absolute;
+
+
+    
+
+    
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5); 
+}
+
+#bigweather {
+    position:absolute; top: 600px;
+    margin-left: 50px;
+    color: white;
+    font-family: 'Dubai-Bold';
+    
+    
+
+    
+    
+}
+
+
+#overlay {
+  position: relative;
+}
+
+
+  
+
+#bigweathertemp{
+  font-size: 5em;
+  font-family: 'Dubai-Bold';
+  
+}
+
+#indexbutton {
+  position: absolute;
+  z-index: 999;
+  bottom: 0px ;
+}
+
+#creditspagelink {
+    position: absolute;
+    z-index: 999;
+  }
+
+#weathericon {
+    margin-left: 20px;
+    margin-top: -35px;
+}
+
+#Conditions {
+  font-size: 2.5em;
+  margin-left: 20px;
+  
+}
+
+span::first-letter {
+  text-transform: uppercase;
+}
+
+#searchresults p {
+    display: inline-block;
+    color: white;
+    
+}
+
+#locationdata {
+  display: none;
+}
+
+#searchresults {
+    
+    top:500px;
+    position: absolute;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white; 
+    padding: 30px 0px 30px 0px;
+    margin-left: 70px;
+    width: 300px;
+}
+
+#apidata {
+  position: fixed;
+  top: 50px;
+  margin: 200px 70px 50px 70px;
+  color: white;
+  border-top: 3px solid white;
+  align-content: center;
+}
+
+p.weathervalues{
+    float: right;
+}
+
+p.label {
+    margin-right: 50px;
+    
+}
+
+#container {
+    
+  top: 0;
+  position: fixed;
+  right: 0;
+  width: 300px; 
+  height: 200px; 
+  background-color: transparent; 
+  padding: 75px; 
+    padding-top: 5px;
+    z-index: 2;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(50px);
+  z-index: 1;
+  overflow: auto  ;
+}
+
+#overlaycredits {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  overflow: auto  ;
+}
+
+#weathericon {
+  font-size: 3em;
+}
+
+
+/* Move below weatherdata once scrollable feature added */
+#resetButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 260px;
+  
+  right: 95px;
+  width: 95px;
+  height: 45px;
+  max-width: 20rem;
+  text-align: left;
+  font-size: 0.7em;
+}
+
+#resetButton:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+
+#weathergamelink button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+
+  top: 260px;
+  right: 0;
+  margin-right: -15px;
+
+  
+  
+  
+  width: 95px;
+  height: 45px;
+  max-width: 20rem;
+  text-align: left;
+  font-size: 0.7em;
+  z-index: 1;
+
+}
+
+
+#weathergamelink button:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+#creditspagelink button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 52px;
+  
+  
+  width: 95px;
+  height: 45px;
+  max-width: 20rem;
+  text-align: left;
+  font-size: 0.7em;
+  z-index: 1;
+  
+  
+}
+
+#creditspagelink button:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+
+
+
+
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80%;
+  color: white;
+}
+
+
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  border: none;
+  width: 200px;
+  max-width: 20rem;
+  background-color: transparent !important;
+  border-bottom: 1px solid white;
+  margin-left: -90px;
+  outline: none;
+  color: white;
+}
+
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  margin-top: 1rem;
+  width: 75px;
+  height: 75px;
+  max-width: 20rem;
+
+}
+
+
+
+
+button[type="submit"]:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+}
+
+#searchicon{
+  height: 50px;
+  width: 50px;
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  pointer-events: none;
+  
+}
+
+#pinnedlocations{
+  color: white;
+  
+
+}
+
+
+#pinnedlocationheader {
+  font-size: 1.5em;
+  margin-left: 70px !important;
+  width: 300px;
+
+
+}
+
+#pinnedlocationlist {
+  margin-left: 70px ;
+  font-size: 1em;
+  margin-top: -30px;
+
+}
+
+#pinlocationbutton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  width: 65px;
+  height: 50px;
+  max-width: 20rem;
+  text-align: left;
+  font-size: 0.7em;
+}
+
+#pinlocationbutton:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+
+}
+
+
+.remove-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 50px;
+  height: 30px;
+  max-width: 20rem;
+  text-align: center;
+  font-size: 0.6em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.remove-button:hover {
+  background-color: rgba(95, 158, 160, 0.2);
+
+}
+
+
+
+
