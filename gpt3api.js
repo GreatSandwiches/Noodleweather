@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set up the request payload with prompt
   
     const data = {
-      model: "gpt-4",
+      model: "gpt-3.5-turbo",
       messages: [{ "role": "user", "content": `Write me a very short (80 words maximum) weather report for today's weather in ${location} which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. Make the report noodle themed. And make sure it includs specific references towards ${location}.` }],
       temperature: 0.5,
       max_tokens: 250,
