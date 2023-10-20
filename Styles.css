@@ -330,7 +330,7 @@ p.label {
 form {
   position: fixed;
   top: 10px;
-  margin: 200px 70px 50px 70px;
+  margin-left: 175px;
   color: white;
   align-content: center;
 }
@@ -364,10 +364,9 @@ button[type="submit"] {
   color: white;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-  position: absolute;
-  top: -20px;
+  position: fixed;
+  top: -4px;
   right: 0;
-  margin-top: 1rem;
   width: 75px;
   height: 75px;
   max-width: 20rem;
@@ -394,7 +393,7 @@ button[type="submit"]:hover {
 
 #pinnedlocations{
   color: white;
-  
+  margin-top: 70px;
 
 }
 
