@@ -265,38 +265,8 @@ p.label {
   background-color: rgba(95, 158, 160, 0.2);
 }
 
-#apikeyinput button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  position: absolute;
-
-  top: 260px;
-  right: 0;
-  margin-right: -15px;
-
-  
-  
-  
-  width: 95px;
-  height: 45px;
-  max-width: 20rem;
-  text-align: left;
-  font-size: 0.7em;
-  z-index: 1;
-
-}
 
 
-#apikeyinput button:hover {
-  background-color: rgba(95, 158, 160, 0.2);
-}
 #creditspagelink button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
