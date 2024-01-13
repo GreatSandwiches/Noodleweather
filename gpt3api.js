@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(json.choices[0].message.content);
         const messagecontent = json.choices[0].message.content;
         document.getElementById('apidata').innerHTML = messagecontent;
-        updateSearchResultsPosition()
       }
     } catch (error) {
       console.error(error);
