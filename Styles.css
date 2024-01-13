@@ -167,23 +167,20 @@ span::first-letter {
 
 #searchresults {
     
-    top:500px;
-    position: absolute;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white; 
-    padding: 30px 0px 30px 0px;
-    margin-left: 70px;
-    width: 300px;
+  margin-top: 20px; /* Add some margin to create space between apidata and searchresults */
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  padding: 30px 0px 30px 0px;
+  margin-left: 70px;
+  width: 300px;
 }
 
 #apidata {
-  position: fixed;
-  top: 50px;
-  margin: 200px 70px 50px 70px;
-  color: white;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-  align-content: center;
+  margin-top: 50px; /* Add some margin to create space at the top */
+    color: white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 20px;
 }
 
 p.weathervalues{
