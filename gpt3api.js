@@ -10,13 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const apiKey = await fetchApiKey();
-      console.log (apiKey);
       const openaiSecretKey = apiKey;
       const headers = {
         "Content-Type": "application/json",
         Authorization: `Bearer ${openaiSecretKey}`,
       };
-      console.log("Request Headers:", headers);
 
       const data = {
         model: "gpt-3.5-turbo",
