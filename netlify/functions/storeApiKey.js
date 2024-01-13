@@ -1,15 +1,15 @@
 
-// Access the OpenAI API key from environment variables
-const openaiApiKey = process.env.OpenAI_SK;
-
 exports.handler = async function (event, context) {
     try {
-        // Store the API key securely
-        process.env.OPENAI_API_KEY = openaiApiKey;
+        // Access the OpenAI API key from environment variables
+        const openaiApiKey = process.env.OPENAI_API_KEY;
+
+        // You can use the API key for further processing
+        console.log("API key:", openaiApiKey);
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: "API key stored successfully" }),
+            body: JSON.stringify({ message: "API key accessed successfully" }),
         };
     } catch (error) {
         return {
