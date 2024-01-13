@@ -1,5 +1,5 @@
 
-function fetchAndUseApiKey() {
+function fetchApiKey() {
     
     fetch("/.netlify/functions/storeApiKey")
         .then(response => response.json())
