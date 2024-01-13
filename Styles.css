@@ -132,6 +132,12 @@ font-size: 5em;
 
 
 
+
+#overlay {
+  position: fixed;
+}
+
+
 #indexbutton {
   position: absolute;
   z-index: 999;
@@ -166,7 +172,7 @@ span::first-letter {
   border-bottom: 3px solid white;
   padding: 30px 0px 30px 0px;
   margin-left: 70px;
-  
+  width: 300px;
 }
 
 #apidata {
@@ -175,7 +181,6 @@ span::first-letter {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     padding: 20px;
-    margin-left: 60px;
 }
 
 p.weathervalues{
@@ -222,6 +227,19 @@ p.label {
 }
 
 
+
+#overlaycredits {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  overflow: auto  ;
+}
+
 #weathericon {
   font-size: 3em;
   position: fixed;
@@ -242,6 +260,9 @@ p.label {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
+  top: 260px;
+  
+  right: 95px;
   width: 95px;
   height: 45px;
   max-width: 20rem;
