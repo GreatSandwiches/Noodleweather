@@ -2,13 +2,12 @@
 exports.handler = async function (event, context) {
     try {
         // Access the OpenAI API key from environment variables
-        const openaiApiKey = process.env.OpenAI_SK;
+        const openaiApiKey = process.env.OPENAI_API_KEY;
 
-        // You can use the API key for further processing
-        console.log("API key:", openaiApiKey);
-
+        // Return the API key as part of the JSON response
         return {
-            openaiApiKey
+            statusCode: 200,
+            body: JSON.stringify({ message: "API key accessed successfully", apiKey: openaiApiKey }),
         };
     } catch (error) {
         return {
