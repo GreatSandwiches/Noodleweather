@@ -8,45 +8,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const windspeed = document.getElementById('windspeedvalue').innerHTML;
     console.log(humidity + conditions + weathertemperature + location);
 
-    // Set up the request payload with prompt
-  
-    const data = {
-      model: "gpt-3.5-turbo",
-      messages: [{ "role": "user", "content": `Write me a very short (80 words maximum) weather report for today's weather in ${location} which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. Make the report noodle themed. And make sure it includs specific references towards ${location}.` }],
-      temperature: 0.5,
-      max_tokens: 250,
-      n: 1,
-      stream: false,
-    };
-
-    fetchApiKey()
-      . then(apiKey => {
-      // Now you can use the API key for further processing
-      useApiKey(apiKey);
-
-      })
-
-    const openaiSecretKey = useApiKey
-    const headers = {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${openaiSecretKey}`,
-    };
-    const url = "https://api.openai.com/v1/chat/completions";
-
     try {
+      const apiKey = await fetchApiKey();
+      const openaiSecretKey = apiKey;
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${openaiSecretKey}`,
+      };
+
+      const data = {
+        model: "gpt-3.5-turbo",
+        messages: [{ "role": "user", "content": `Write me a very short (80 words maximum) weather report for today's weather in ${location} which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. Make the report noodle themed. And make sure it includes specific references towards ${location}.` }],
+        temperature: 0.5,
+        max_tokens: 250,
+        n: 1,
+        stream: false,
+      };
+
+      const url = "https://api.openai.com/v1/chat/completions";
+
       const response = await fetch(url, {
         method: "POST",
         headers,
         body: JSON.stringify(data),
       });
-      console.log(response); 
+
       if (response.ok) {
-        response.json().then((json) => {
-          console.log(json);  
-          console.log(json.choices[0].message.content)
-          const messagecontent = (json.choices[0].message.content)
-          document.getElementById('apidata').innerHTML = messagecontent;
-        });
+        const json = await response.json();
+        console.log(json.choices[0].message.content);
+        const messagecontent = json.choices[0].message.content;
+        document.getElementById('apidata').innerHTML = messagecontent;
       }
     } catch (error) {
       console.error(error);
