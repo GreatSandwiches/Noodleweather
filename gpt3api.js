@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stream: false,
     };
 
-    const openaiSecretKey = config.openaiSecretKey
+    const openaiSecretKey = localStorage.getItem("openApiKey");
     const headers = {
       "Content-Type": "application/json",
       Authorization: `Bearer ${openaiSecretKey}`,

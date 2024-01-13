@@ -265,7 +265,7 @@ p.label {
   background-color: rgba(95, 158, 160, 0.2);
 }
 
-#weathergamelink button {
+#apikeyinput button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
@@ -294,7 +294,7 @@ p.label {
 }
 
 
-#weathergamelink button:hover {
+#apikeyinput button:hover {
   background-color: rgba(95, 158, 160, 0.2);
 }
 #creditspagelink button {
