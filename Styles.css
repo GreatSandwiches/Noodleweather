@@ -248,7 +248,8 @@ p.label {
 }
 
 #resetButton,
-#creditspagelink button {
+#creditspagelink button,
+#openSettingsBtn {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -268,17 +269,24 @@ p.label {
 }
 
 #resetButton {
-  margin-right: 125px; 
+  margin-right: 40px; 
 }
 
 #creditspagelink button {
-  margin-left: 125px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#openSettingsBtn {
+  margin-left: 40px ;
 }
 
 #resetButton:hover,
-#creditspagelink button:hover {
+#creditspagelink button:hover,
+#openSettingsBtn:hover {
   background-color: rgba(95, 158, 160, 0.2);
 }
+
 
 
 
@@ -423,6 +431,34 @@ button[type="submit"]:hover {
 
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  width: 60%; 
+  max-width: 300px; 
+  height: auto;
+  border-radius: 5%;
+  color: white;
+}
+
+.popup-content {
+  max-width: 400px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 
 

@@ -10,6 +10,7 @@
   <script src="Websiteapi.js"></script>
   <script src="gpt3api.js"></script> 
   <script src="fetchAndUseApiKey.js"></script> 
+  <script src="settingspopup.js"></script>
   
   
   
@@ -36,7 +37,19 @@ body {
       <span id="Conditions">  </span>
       <span id="weathericon"></span>
     </div>
-</div>
+
+    <div id="settingsPopup" class="popup">
+      <div class="popup-content">
+          <span class="close" id="closeSettingsBtn">&times;</span>
+          <label for="promptSelector">Select a prompt:</label>
+          <select id="promptSelector">
+              <option value="prompt1">Prompt 1</option>
+              <option value="prompt2">Prompt 2</option>
+              
+          </select>
+          <div id="apidata"></div>
+      </div>
+  </div>
   
       
 <div id="overlay">
@@ -89,6 +102,7 @@ body {
         <div class="button-container">
           <button id="resetButton">Reset home location</button>
           <a id="creditspagelink" href="credits page.html"><button>Credits Page</button></a>
+          <button id="openSettingsBtn">Settings</button>
         </div>
       
       </div>
