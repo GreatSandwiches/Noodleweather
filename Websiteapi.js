@@ -9,12 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const location = locationInput.value;
+    console.log(location);
     getWeather(location);
   });
 
   function getWeather(location) {
     const apiKey = 'dea21c2780e5b55746cd4d2be3b8cab3';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+    const encodedLocation = encodeURIComponent(location);
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodedLocation}&units=metric&appid=${apiKey}`;
+    
     // Make api call
     fetch(apiUrl)
       .then(response => response.json())
