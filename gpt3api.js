@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = {
         model: "gpt-3.5-turbo",
-        messages: [{ "role": "user", "content": `Give me a forecast that's as cheeky and entertaining as Carrot Weather. Bonus points for throwing in some witty comments about the unpredictable nature of weather, and maybe a snarky remark about the user's choice of location. Make meteorology sound as fun as a stand-up comedy routine! Write me a very short (80 words maximum) weather report for the current weather in ${location} which is: ${weathertemperature}, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. And make sure it includes specific references towards ${location}.` }],
+        messages: [{ "role": "user", "content": `Give me a forecast that's as cheeky and entertaining as Carrot Weather. Bonus points for throwing in an extra snarky remark. Make meteorology sound as fun as a stand-up comedy routine! Write me a snarky, concise comment about the current weather in  ${location}. Use these conditions to base your comment off of: which is: ${temperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. ` }],
         temperature: 0.5,
         max_tokens: 250,
         n: 1,
