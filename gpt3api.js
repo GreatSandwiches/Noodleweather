@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = {
         model: "gpt-3.5-turbo",
-        messages: [{ "role": "user", "content": `Write me a very short (80 words maximum) weather report for today's weather in ${location} which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. Make the report noodle themed. And make sure it includes specific references towards ${location}.` }],
+        messages: [{ "role": "user", "content": `You are a cynical weather reporter. Write me a very short (80 words maximum) weather report for the current weather in ${location} which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. Make the report noodle themed. And make sure it includes specific references towards ${location}.` }],
         temperature: 0.5,
         max_tokens: 250,
         n: 1,
