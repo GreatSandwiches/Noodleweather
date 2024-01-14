@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function getWeather(location) {
     const apiKey = 'dea21c2780e5b55746cd4d2be3b8cab3';
-    const encodedLocation = encodeURIComponent(location);
+    const encodedLocation = location.replace(/ /g, '+');
+    const locationWithoutSpaces = encodedLocation.replace(/\+/g, '');
+    console.log(encodedLocation);
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodedLocation}&units=metric&appid=${apiKey}`;
     
     // Make api call
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         bigweathertemp.innerHTML = `${weathertemperature} &deg;C`;
         const conditionsSpan = document.getElementById('Conditions');
         conditionsSpan.innerHTML = conditions;
-        locationdata.innerHTML = location;
+        locationdata.innerHTML = encodedLocation;
         // Change icon based off of conditions
         if (conditions.includes('rain') || conditions.includes('drizzle')) {
           weathericon.innerHTML = '<i class="wi wi-day-rain"></i>';
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Pexels api for background img  
         setTimeout(() => {
-          fetch(`https://api.pexels.com/v1/search?query=${location}&per_page=1&page=1&orientation=landscape`, {
+          fetch(`https://api.pexels.com/v1/search?query=${locationWithoutSpaces}&per_page=1&page=1&orientation=landscape`, {
             headers: {
               Authorization: "gSpYX4kZnMU9ZOnBNI15BctgnR5DfCUtNrHZvg3qov71er0uaCIxfFd9",
             },
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
               if (typeof data.total_results === "number" && data.total_results > 0) {
                 const perPage = 1;
                 const randomPage = Math.floor(Math.random() * data.total_results / perPage) + 1;
-                fetch(`https://api.pexels.com/v1/search?query=${location}&per_page=${perPage}&page=${randomPage}&orientation=landscape`, {
+                fetch(`https://api.pexels.com/v1/search?query=${locationWithoutSpaces}&per_page=${perPage}&page=${randomPage}&orientation=landscape`, {
                   headers: {
                     Authorization: "gSpYX4kZnMU9ZOnBNI15BctgnR5DfCUtNrHZvg3qov71er0uaCIxfFd9",
                   },
