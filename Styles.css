@@ -244,6 +244,7 @@ p.label {
   justify-content: space-around;
   padding: 10px; 
   margin-top: 20px;
+  pointer-events: none;
 }
 
 #resetButton,
@@ -263,6 +264,7 @@ p.label {
   max-width: 20rem;
   text-align: left;
   font-size: 0.7em;
+  pointer-events: auto;
 }
 
 #resetButton {
