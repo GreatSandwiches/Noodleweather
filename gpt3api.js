@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const userInput = document.getElementById('settingsPopup').querySelector('#userInput');
           const responseDiv = document.getElementById('settingsPopup').querySelector('#apidata');
           const promptValue = promptSelector.value || promptSelector.options[promptSelector.selectedIndex].value;
+          console.log('promptSelector:', promptSelector);
           
           // Pass additional parameters to getPrompt function
           const prompt = getPrompt(promptValue, location, weathertemperature, conditions, humidity, windspeed, userInput.value);
