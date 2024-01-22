@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   async function callchatgpt() {
+
+      console.log('Entering callchatgpt function')
+      
       const humidity = document.getElementById('humidityvalue').innerHTML;
       const conditions = document.getElementById('Conditions').innerHTML;
       const weathertemperature = document.getElementById('bigweathertemp').innerHTML;
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
               Authorization: `Bearer ${openaiSecretKey}`,
           };
 
+
           const promptSelector = document.getElementById('settingsPopup').querySelector('#promptSelector');
           const userInput = document.getElementById('settingsPopup').querySelector('#userInput');
           const responseDiv = document.getElementById('settingsPopup').querySelector('#apidata');
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           // Pass additional parameters to getPrompt function
           const prompt = getPrompt(promptValue, location, weathertemperature, conditions, humidity, windspeed, userInput.value);
-
+          console.log(prompt);
           const data = {
               model: "gpt-3.5-turbo",
               messages: [{ "role": "user", "content": prompt }],
