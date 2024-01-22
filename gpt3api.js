@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           // Pass additional parameters to getPrompt function
           const prompt = getPrompt(promptValue, location, weathertemperature, conditions, humidity, windspeed, userInput.value);
-          console.log('After getPrompt:');
-          console.log('Prompt:', prompt);
-          
+          console.log(prompt);
           const data = {
               model: "gpt-3.5-turbo",
               messages: [{ "role": "user", "content": prompt }],
