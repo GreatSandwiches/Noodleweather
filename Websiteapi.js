@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     getWeather(location);
   });
 
-  function getWeather(location) {
+    function getWeather(location, units = 'metric') {
     const apiKey = 'dea21c2780e5b55746cd4d2be3b8cab3';
     const encodedLocation = location.replace(/ /g, '+');
     const locationWithoutSpaces = encodedLocation.replace(/\+/g, '');
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const windSpeed = data.wind.speed;
         const airPressure = data.main.pressure;
 
-        bigweathertemp.innerHTML = `${weathertemperature} &deg;C`;
+        bigweathertemp.innerHTML = `${weathertemperature}`;
         const conditionsSpan = document.getElementById('Conditions');
         conditionsSpan.innerHTML = conditions;
         locationdata.innerHTML = encodedLocation;
