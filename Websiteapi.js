@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const windSpeed = data.wind.speed;
         const airPressure = data.main.pressure;
 
-        bigweathertemp.innerHTML = `${weathertemperature} &C`;
+        bigweathertemp.innerHTML = `${weathertemperature} °C`;
         const conditionsSpan = document.getElementById('Conditions');
         conditionsSpan.innerHTML = conditions;
         locationdata.innerHTML = encodedLocation; 
