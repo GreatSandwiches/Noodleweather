@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const locationInput = document.getElementById('locationInput');
   const bigweathertemp = document.getElementById('bigweathertemp');
   const weathericon = document.getElementById('weathericon');
+  const units = 'metric';
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const location = locationInput.value;
     console.log(location);
-    getWeather(location);
+    getWeather(location, units);
   });
 
     function getWeather(location, units = 'metric') {
@@ -17,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const encodedLocation = location.replace(/ /g, '+');
     const locationWithoutSpaces = encodedLocation.replace(/\+/g, '');
     console.log(encodedLocation);
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodedLocation}&units=metric&appid=${apiKey}`;
+    console.log(units);
+
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodedLocation}&units=${units}&appid=${apiKey}`;
     
     // Make api call
     fetch(apiUrl)
