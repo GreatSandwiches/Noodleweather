@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const windSpeed = data.wind.speed;
         const airPressure = data.main.pressure;
 
-        bigweathertemp.innerHTML = `${weathertemperature}`;
+        bigweathertemp.innerHTML = `${weathertemperature} &C`;
         const conditionsSpan = document.getElementById('Conditions');
         conditionsSpan.innerHTML = conditions;
-        locationdata.innerHTML = encodedLocation;
+        locationdata.innerHTML = encodedLocation; 
         // Change icon based off of conditions
         if (conditions.includes('rain') || conditions.includes('drizzle')) {
           weathericon.innerHTML = '<i class="wi wi-day-rain"></i>';
