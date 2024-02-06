@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // This function is called when the form is submitted
   async function callchatgpt() {
     const humidity = document.getElementById('humidityvalue').innerHTML;
     const conditions = document.getElementById('Conditions').innerHTML;
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Authorization: `Bearer ${openaiSecretKey}`,
       };
       
-
+      // Define the data for the API request
       const data = {
         model: "gpt-3.5-turbo",
         messages: [{ "role": "user", "content": `Give me a forecast that's as cheeky and entertaining as Carrot Weather. Bonus points for throwing in an extra snarky remark. Make meteorology sound as fun as a stand-up comedy routine! Write me a snarky, concise comment about the current weather in  ${location}. Use these conditions to base your comment off of: which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. ` }],
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error(error);
     }
   }
-
+  
   function init() {
     const button = document.getElementById("weatherForm");
     button.addEventListener("submit", (event) => {

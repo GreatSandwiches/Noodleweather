@@ -1,3 +1,4 @@
+// Prototype for ability to change units from imperial to metric and vice versa (not currently implemented/working)
 document.addEventListener("DOMContentLoaded", function() {
     const button = document.getElementById('unit-toggle');
     if (button) {

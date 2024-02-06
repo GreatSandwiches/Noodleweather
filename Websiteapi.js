@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(location);
     getWeather(location, units);
   });
-
+    // Get weather data
     function getWeather(location, units = 'metric') {
     const apiKey = 'dea21c2780e5b55746cd4d2be3b8cab3';
     const encodedLocation = location.replace(/ /g, '+');
