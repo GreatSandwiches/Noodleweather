@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Define the data for the API request
       const data = {
-        model: "gptgpt-4o-mini",
+        model: "gpt-4o-mini",
         messages: [{ "role": "user", "content": `Give me a forecast that's as cheeky and entertaining as Carrot Weather. Bonus points for throwing in an extra snarky remark. Make meteorology sound as fun as a stand-up comedy routine! Write me a snarky, concise comment about the current weather in  ${location}. Use these conditions to base your comment off of: which is: ${weathertemperature} degrees, ${conditions}, ${humidity} humidity, windspeed of ${windspeed}. ` }],
         temperature: 0.5,
         max_tokens: 250,
