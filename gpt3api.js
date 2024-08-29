@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById("weatherForm");
     button.addEventListener("submit", (event) => {
       event.preventDefault();
-      setTimeout(callchatgpt, 1500);
+      setTimeout(callchatgpt, 5000);
     });
   }
 
