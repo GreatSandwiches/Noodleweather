@@ -130,7 +130,112 @@ font-size: 5em;
 }
 
 
+/* Apple-style Forecast */
+/* Updated Forecast Container */
+.forecast-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 20px 0; /* Reduced side margins */
+  padding: 0 0 1rem;
+  overflow-x: auto;
+  width: calc(100% - 40px); /* Take full width minus margins */
+}
 
+/* Forecast Day Items */
+.forecast-day {
+  background: transparent !important;
+  padding: 0.8rem 0.5rem;
+  border-radius: 12px;
+  min-width: 120px; /* Increased minimum width */
+  width: 16%; /* Percentage-based width */
+  flex-shrink: 0;
+  text-align: center;
+  backdrop-filter: none;
+  border: none;
+}
+
+.forecast-date {
+  font-family: 'Dubai-Bold', sans-serif;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.3px;
+}
+
+.forecast-day i.wi {
+  font-size: 1.4em;
+  margin: 0.3rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  display: block;
+}
+
+.forecast-temps {
+  font-family: 'Dubai-Bold', sans-serif;
+  font-size: 0.9em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.forecast-temps span:first-child {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.forecast-temps span:last-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+  .forecast-container {
+    margin: 1.5rem 35px 0;
+    max-width: calc(100% - 70px);
+  }
+  
+  .forecast-day {
+    min-width: 55px;
+    padding: 0.6rem 0.4rem;
+    border-radius: 10px;
+  }
+  
+  .forecast-date {
+    font-size: 0.75em;
+  }
+  
+  .forecast-day i.wi {
+    font-size: 1.2em;
+  }
+  
+  .forecast-temps {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .forecast-container {
+    margin: 1rem 20px 0;
+    max-width: calc(100% - 40px);
+  }
+  
+  .forecast-day {
+    min-width: 50px;
+    padding: 0.5rem 0.3rem;
+    border-radius: 8px;
+  }
+  
+  .forecast-date {
+    font-size: 0.7em;
+  }
+  
+  .forecast-day i.wi {
+    font-size: 1em;
+  }
+  
+  .forecast-temps {
+    font-size: 0.75em;
+  }
+}
 
 
 #overlay {
